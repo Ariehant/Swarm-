@@ -1,0 +1,52 @@
+name: three-drone-swarm
+x-companion: &companion
+  image: three-drone-companion:1.0
+  build:
+    context: .
+    target: companion
+  init: true
+  network_mode: service:sim
+  depends_on:
+    sim:
+      condition: service_healthy
+  volumes:
+    - ./config:/app/config:ro
+    - ./logs:/logs
+  restart: "no"
+services:
+  sim:
+    image: three-drone-sim:1.0
+    build:
+      context: .
+      target: sim
+      args:
+        PX4_REF: v1.16.0
+        BUILD_JOBS: ${BUILD_JOBS:-4}
+    platform: linux/amd64
+    volumes:
+      - ./config:/app/config:ro
+      - ./logs:/logs
+    ports:
+      - "127.0.0.1:8080:8080"
+    shm_size: 2gb
+    environment:
+      GZ_PARTITION: three_drone_swarm
+    healthcheck:
+      test: ["CMD", "test", "-f", "/tmp/swarm-ready"]
+      interval: 2s
+      timeout: 1s
+      retries: 90
+    stop_grace_period: 15s
+    restart: "no"
+  coordinator:
+    <<: *companion
+    command: ["python", "-m", "swarm.coordinator"]
+  drone1:
+    <<: *companion
+    command: ["python", "-m", "swarm.agent", "--id", "1"]
+  drone2:
+    <<: *companion
+    command: ["python", "-m", "swarm.agent", "--id", "2"]
+  drone3:
+    <<: *companion
+    command: ["python", "-m", "swarm.agent", "--id", "3"]
