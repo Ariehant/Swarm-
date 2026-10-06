@@ -1,0 +1,21 @@
+test_all_vehicle_mode_barrier (test_controller.Tests.test_all_vehicle_mode_barrier) ... ok
+test_complete_mission_with_ideal_followers (test_controller.Tests.test_complete_mission_with_ideal_followers) ... ok
+test_correction_sign_and_limit (test_controller.Tests.test_correction_sign_and_limit) ... ok
+test_fresh_packet_does_not_hide_stale_position (test_controller.Tests.test_fresh_packet_does_not_hide_stale_position) ... ok
+test_invalid_override_rejected (test_controller.Tests.test_invalid_override_rejected) ... ok
+test_landing_needs_disarm_and_ground (test_controller.Tests.test_landing_needs_disarm_and_ground) ... ok
+test_no_start_on_wrong_marker (test_controller.Tests.test_no_start_on_wrong_marker) ... ok
+test_no_start_with_missing_drone (test_controller.Tests.test_no_start_with_missing_drone) ... ok
+test_override_slew_and_resume (test_controller.Tests.test_override_slew_and_resume) ... ok
+test_partial_arm_timeout_aborts (test_controller.Tests.test_partial_arm_timeout_aborts) ... ok
+test_soft_hold_and_hard_abort (test_controller.Tests.test_soft_hold_and_hard_abort) ... ok
+test_telemetry_loss_aborts (test_controller.Tests.test_telemetry_loss_aborts) ... ok
+test_triangle_and_gps_axes (test_controller.Tests.test_triangle_and_gps_axes) ... ok
+test_future_land_epoch_holds_before_release (test_protocol.ProtocolTests.test_future_land_epoch_holds_before_release) ... ok
+test_global_target_units_and_address (test_protocol.ProtocolTests.test_global_target_units_and_address) ... ok
+test_stale_plan_latches_land_and_no_rearm (test_protocol.ProtocolTests.test_stale_plan_latches_land_and_no_rearm) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.101s
+
+OK

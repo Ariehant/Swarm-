@@ -1,0 +1,30 @@
+{
+  "origin": {"lat": 47.397742, "lon": 8.545594, "amsl": 488.0},
+  "side_m": 12.0,
+  "takeoff_agl_m": 8.0,
+  "landing_agl_m": 2.0,
+  "waypoints": [
+    {"lat": 47.397922, "lon": 8.545594, "agl": 8.0},
+    {"lat": 47.397922, "lon": 8.545859, "agl": 8.0},
+    {"lat": 47.397742, "lon": 8.545859, "agl": 8.0}
+  ],
+  "landing": {"lat": 47.397742, "lon": 8.545859, "agl": 8.0},
+  "rate_hz": 20,
+  "speed_mps": 1.2,
+  "vertical_mps": 0.6,
+  "arrival_m": 0.8,
+  "settle_s": 2.0,
+  "peer_gain": 0.25,
+  "max_correction_m": 0.6,
+  "tracking_hold_m": 2.5,
+  "edge_hold_m": 1.5,
+  "edge_abort_m": 4.0,
+  "min_separation_m": 5.0,
+  "stale_s": 0.75,
+  "heartbeat_stale_s": 3.0,
+  "gps_eph_max_m": 3.0,
+  "radius_m": 150.0,
+  "max_agl_m": 30.0,
+  "motion_timeout_s": 180.0,
+  "hold_timeout_s": 120.0
+}

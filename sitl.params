@@ -1,0 +1,13 @@
+
+# SITL ONLY. Appended to the x500 airframe before building.
+param set-default COM_RC_IN_MODE 4
+param set-default NAV_DLL_ACT 0
+param set-default COM_OF_LOSS_T 0.7
+param set-default COM_OBL_RC_ACT 4
+param set-default COM_DISARM_PRFLT 15
+param set-default COM_DISARM_LAND 2
+param set-default MPC_XY_VEL_MAX 3
+param set-default MPC_Z_VEL_MAX_UP 1.5
+param set-default MPC_Z_VEL_MAX_DN 0.8
+param set-default MPC_LAND_SPEED 0.5
+param set-default SDLOG_MODE 0

@@ -1,0 +1,7 @@
+# Ubuntu host utilities. Docker is installed separately from its official apt repository.
+ca-certificates
+curl
+gnupg
+git
+unzip
+python3
